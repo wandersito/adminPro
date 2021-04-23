@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                
+                <h4 class="card-title"> Striped Progress Bar</h4>
+
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-primary progress-bar-striped active" 
+                         style="height:10px;"
+                         [style.width]="getProgreso1"
+                         role="progressbar">
+                        </div>
+                </div>
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-info progress-bar-striped active" 
+                         style="height:10px;"
+                         [style.width]="getProgreso2"
+                         role="progressbar">
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+      <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <app-increasing [progress]="progress1"
+                                (value)=" progress1 = $event">
+                </app-increasing>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                
+                <app-increasing [progress]="progress2"
+                                [btnClass]="'btn-info'"
+                                (value)=" progress2 = $event "
+                                >
+                </app-increasing>
+
+            </div>
+        </div>
+      </div>
+
+  </div>
